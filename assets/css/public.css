@@ -1,1 +1,37 @@
-TODO
+/* Woo Social Market - frontend base */
+/* author: socialforger */
+
+.woosm-login-form,
+.woosm-registration-form,
+.woosm-reserved-home {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.woosm-login-form label,
+.woosm-registration-form label {
+    font-weight: 600;
+}
+
+.woosm-login-form input,
+.woosm-registration-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.woosm-login-form button,
+.woosm-registration-form button {
+    padding: 0.5rem 1rem;
+}
+
+.woosm-message {
+    padding: 0.5rem;
+    background: #f0f8ff;
+    border: 1px solid #cce;
+    margin-bottom: 1rem;
+}
