@@ -1,66 +1,70 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
-}
+if (!defined('ABSPATH')) exit;
 
-$email = isset( $woosm_email ) ? $woosm_email : '';
+$email = isset($woosm_email) ? $woosm_email : '';
 ?>
-<div class="woosm-registration-form">
-    <h2><?php esc_html_e( 'Completa la registrazione', 'woosocialmarket' ); ?></h2>
-    <form method="post">
-        <?php wp_nonce_field( 'woosm_registration', 'woosm_registration_nonce' ); ?>
+<div class="ct-container woosm-auth-container">
+    <div class="ct-card woosm-auth-card">
+        <h2 class="ct-title"><?php esc_html_e('Completa la registrazione', 'woosocialmarket'); ?></h2>
 
-        <p>
-            <label><?php esc_html_e( 'Email', 'woosocialmarket' ); ?></label><br>
-            <input type="email" name="woosm_email" value="<?php echo esc_attr( $email ); ?>" readonly>
-        </p>
+        <form method="post" class="woosm-form">
+            <?php wp_nonce_field('woosm_registration', 'woosm_registration_nonce'); ?>
 
-        <p>
-            <label><?php esc_html_e( 'Nome', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_first_name" required>
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Email', 'woosocialmarket'); ?></label>
+                <input type="email" name="woosm_email" class="ct-input" value="<?php echo esc_attr($email); ?>" readonly>
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'Cognome', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_last_name" required>
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Nome', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_first_name" class="ct-input" required>
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'Data di nascita', 'woosocialmarket' ); ?></label><br>
-            <input type="date" name="woosm_birth_date">
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Cognome', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_last_name" class="ct-input" required>
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'Luogo di nascita', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_birth_place">
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Data di nascita', 'woosocialmarket'); ?></label>
+                <input type="date" name="woosm_birth_date" class="ct-input">
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'Indirizzo e numero civico', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_address" required>
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Luogo di nascita', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_birth_place" class="ct-input">
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'CAP', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_zip">
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Indirizzo e numero civico', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_address" class="ct-input" required>
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'Città', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_city" required>
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('CAP', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_zip" class="ct-input">
+            </div>
 
-        <p>
-            <label><?php esc_html_e( 'Nazione', 'woosocialmarket' ); ?></label><br>
-            <input type="text" name="woosm_country" value="Italia">
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Città', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_city" class="ct-input" required>
+            </div>
 
-        <p class="woosm-info">
-            <?php esc_html_e( 'Per poter usare la piattaforma sarai iscritto all\'associazione che la gestisce al momento del primo pagamento (aggiunta del prodotto di iscrizione al carrello).', 'woosocialmarket' ); ?>
-        </p>
+            <div class="woosm-field">
+                <label class="ct-label"><?php esc_html_e('Nazione', 'woosocialmarket'); ?></label>
+                <input type="text" name="woosm_country" class="ct-input" value="Italia">
+            </div>
 
-        <p>
-            <button type="submit"><?php esc_html_e( 'Completa registrazione', 'woosocialmarket' ); ?></button>
-        </p>
-    </form>
+            <p class="woosm-info ct-text-muted">
+                <?php esc_html_e(
+                    'Per poter usare la piattaforma sarai iscritto all\'associazione che la gestisce al momento del primo pagamento (aggiunta del prodotto di iscrizione al carrello).',
+                    'woosocialmarket'
+                ); ?>
+            </p>
+
+            <button type="submit" class="ct-button ct-button-primary">
+                <?php esc_html_e('Completa registrazione', 'woosocialmarket'); ?>
+            </button>
+        </form>
+    </div>
 </div>
