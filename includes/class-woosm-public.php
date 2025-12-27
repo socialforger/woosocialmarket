@@ -4,9 +4,7 @@
  * author: socialforger
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
-}
+if (!defined('ABSPATH')) exit;
 
 class Woosm_Public {
 
@@ -14,14 +12,14 @@ class Woosm_Public {
         wp_enqueue_style(
             'woosm-public',
             WOOSM_PLUGIN_URL . 'assets/css/public.css',
-            array(),
+            [],
             WOOSM_VERSION
         );
 
         wp_enqueue_script(
             'woosm-public',
             WOOSM_PLUGIN_URL . 'assets/js/public.js',
-            array( 'jquery' ),
+            ['jquery'],
             WOOSM_VERSION,
             true
         );
